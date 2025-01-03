@@ -3,7 +3,7 @@
 #include <limits.h>
 
 #define V 8
-
+// Travelling salesman problem solved using minimum distance travelled using C
 typedef struct {
     int x, y;
 } City;
