@@ -97,7 +97,7 @@ int main() {
 
     double min_cost = travellingSalesmanProblem(cities, s, e, path);
 
-    printf("Minimum cost to visit all cities: %.2f\n", min_cost);
+    //printf("Minimum cost to visit all cities: %.2f\n", min_cost);
     printf("Path: ");
     printPath(path, V);
 
