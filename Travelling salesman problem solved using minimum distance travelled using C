@@ -1,13 +1,23 @@
-
 #include <stdio.h>
 #include <math.h>
 #include <limits.h>
 
 #define V 8
-// Travelling salesman problem solved using minimum distance travelled using C
+
+// Customizable Travelling salesman problem (solved using minimum distance travelled using C)
+
+// Step 1: Update V above on line to actual size of your array
+
 typedef struct {
     int x, y;
 } City;
+
+// Step 2: Update array below to co-ordinates of the points you are interested in
+City cities[V] = {{0, 264}, {24, 246}, {24, 648}, {648, 428},  {48, 247}, {948,12}, {60,24}, {727,5} };
+
+// Step 3: Update variables "s" and "e" below to indicate the start and end cities
+int s = 0; // Starting point (City A)
+int e = 7; // Ending point (City E)
 
 double calculateDistance(City c1, City c2) {
     return sqrt(pow(c1.x - c2.x, 2) + pow(c1.y - c2.y, 2));
@@ -81,9 +91,8 @@ void printPath(int* path, int n) {
 }
 
 int main() {
-    City cities[V] = {{0, 264}, {24, 246}, {24, 648}, {648, 428},  {48, 247}, {948,12}, {60,24}, {727,5} };
-    int s = 0; // Starting point (City A)
-    int e = 7; // Ending point (City E)
+    
+    
     int path[V];
 
     double min_cost = travellingSalesmanProblem(cities, s, e, path);
